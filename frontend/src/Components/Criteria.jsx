@@ -43,7 +43,6 @@ const Criteria = () => {
           </Link>
         );
       }
-      // Return the word as is if it's not a placeholder
       return word + " ";
     });
   };

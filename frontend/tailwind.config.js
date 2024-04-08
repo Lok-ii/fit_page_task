@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       boxShadow:{
-        home: "0 0 30px 1px white",
+        home: "0 0 1px 0px black",
       }
     },
   },
