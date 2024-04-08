@@ -13,7 +13,7 @@ const Context = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:10000/");
+        const response = await axios.get("https://fit-page-task.onrender.com/");
         console.log(response.data);
         setData(response.data.data);
       } catch (error) {

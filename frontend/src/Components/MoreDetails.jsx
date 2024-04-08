@@ -10,7 +10,7 @@ const MoreDetails = () => {
     const getVariableData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:10000/${params.id}/${params.variable}`
+          `https://fit-page-task.onrender.com/${params.id}/${params.variable}`
         );
         console.log(response.data);
         if (Array.isArray(response.data.valuesForVariable)) {

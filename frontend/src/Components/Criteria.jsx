@@ -10,7 +10,7 @@ const Criteria = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:10000/${params.id}`);
+        const response = await axios.get(`https://fit-page-task.onrender.com/${params.id}`);
         setCriteria(response.data.data[0]);
       } catch (error) {
         console.error("Error fetching criteria data:", error);
