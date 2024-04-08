@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { useStock } from "../StockContext/Context";
+import { ShimmerTitle } from "react-shimmer-effects";
 
 const Home = () => {
   const { data } = useStock();
   console.log(data);
   return (
     <div className="w-full h-full flex flex-col shadow-home rounded-lg">
-      {data
+      {data.length !== 0
         ? data.map((item, idx) => {
             return (
               <Link
@@ -19,7 +20,16 @@ const Home = () => {
               </Link>
             );
           })
-        : "Loading..."}
+        : 
+        (
+          <div>
+            <ShimmerTitle line={2} gap={10} variant="primary" />
+            <ShimmerTitle line={2} gap={10} variant="primary" />
+            <ShimmerTitle line={2} gap={10} variant="primary" />
+            <ShimmerTitle line={2} gap={10} variant="primary" />
+          </div>
+        )
+        }
     </div>
   );
 };
